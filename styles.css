@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', 'sans-serif';
+    scroll-behavior: smooth;
 }
 
 li{ 
@@ -48,11 +49,11 @@ input:hover, textarea:hover {
 }
 
 input:focus, textarea:focus{
-    border-color: #f06449;
+    border-color: #1a08eb;
 } 
 
 .container{
-    padding: 50px 0;
+    padding: 58px 0;
     width: 100%;
 }
 
@@ -92,7 +93,7 @@ button{
 }
 
 .orange{
-    color: #f06449 !important;
+    color: #2b18f7d3 !important;
 }
 .link__hover-effect{
     position:relative; 
@@ -197,7 +198,7 @@ nav,
  }
 
  .social__link{
-    background-color: #f06449;
+    background-color: #2b18f7d3;
     color: white;
     padding: 6px;
     width: 32px;
@@ -218,9 +219,11 @@ nav,
     border:none;
     background-color: #242424;
     color: white;
-    position:absolute;
+    position:fixed;
     bottom: 32px;
     right: 40px;
+    z-index: 100;
+    box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.28);
 }
 
 .scroll{
@@ -397,8 +400,8 @@ nav{
 }
 
 .form__submit{
-    background-color:  #f06449;
-    border: 2px solid #f06449;
+    background-color:  #2b18f7d3;
+    border: 2px solid #2b18f7d3;
     color: white;
     font-weight: 700;
     width: 100%;
@@ -413,8 +416,8 @@ nav{
 }
 
 .form__submit:active{
-    border-color: #f06449;
-    color: #f06449;
+    border-color: #2b18f7d3;
+    color: #2b18f7d3;
 }
 
 .modal__overlay{
@@ -475,6 +478,9 @@ nav{
     text-align: center;
     font-size: 48px;
     margin-bottom: 60px;
+}
+.project{
+    margin-bottom: 24px;
 }
 
 .project__img{
@@ -549,6 +555,7 @@ nav{
 /* Footer */
 
 footer{
+    position: relative;
     background-color:  #242424;
     display:flex;
     padding: 6% 0;
@@ -580,4 +587,94 @@ footer{
 
 /* Shapes */
 
+.shape{
+    position: fixed;
+}
 
+.shape--0{
+    top: 15vh;
+    left: 5vw;
+}
+.shape--1{
+    top: 15vh;
+    left: 50vw;
+}
+.shape--2{
+    top: 15vh;
+    left: 80vw;
+}
+.shape--3{
+    top: 50vh;
+    left: 5vw;
+}
+.shape--4{
+    top: 50vh;
+    left: 50vw;
+}
+.shape--5{
+    top: 50vh;
+    left: 80vw;
+}
+.shape--6{
+    top: 80vh;
+    left: 5vw;
+}
+.shape--7{
+    top: 80vh;
+    left: 50vw;
+}
+.shape--8{
+    top: 80vh;
+    left: 80vw;
+}
+
+
+/* Small phones, tablets, large smart phones*/
+@media (max-width:768px){
+    .title{
+        font-size: 80px;
+    }
+    .header__para{
+        font-size: 20px;
+    }
+    .modal{
+        top:0;
+        left:0;
+        transform: none;
+        height: auto;
+        width: 100%;
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+    .modal__half{
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 480px){
+    .title{
+        font-size: 52px;
+    }
+    .header__para{
+        font-size: 18px;
+    }
+    .nav__link:first-child{
+        display: none;
+    }
+    .project__description--para{
+        display: none;
+    }
+    .project__description{
+        left: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .project__description--sub-title{
+        margin-bottom: 8px;
+    }
+    .modal__half{
+        padding: 40px;
+    }
+}
